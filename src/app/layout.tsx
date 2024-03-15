@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col justify-center items-start h-screen w-screen">
+        <div className="flex flex-col justify-center items-start h-screen w-screen bg-[#1d2125]">
           <Navbar />
           <div className="h-screen w-screen flex justify-center items-start">
             <Sidebar />
