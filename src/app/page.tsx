@@ -35,7 +35,7 @@ export default function Home() {
                   <option value="">Choose something</option>
                 </select>
               </div>
-              <div className="w-full flex flex-col justify-center items-center gap-[10px] md:flex-wrap md:flex-row">
+              <div className="w-full flex flex-col justify-center md:justify-start items-center gap-[10px] md:flex-wrap md:flex-row">
                 <div className="w-[80%] md:w-[300px] h-[85px] bg-[#282d33] rounded-md"></div>
                 <div className="w-[80%] md:w-[300px] h-[85px] bg-[#282d33] rounded-md"></div>
                 <div className="w-[80%] md:w-[300px] h-[85px] bg-[#282d33] rounded-md"></div>

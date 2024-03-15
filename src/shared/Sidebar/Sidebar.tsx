@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useContext, useEffect } from "react";
+import { useContext, useLayoutEffect } from "react";
 import { CiSettings } from "react-icons/ci";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
@@ -12,6 +12,7 @@ const Sidebar = () => {
 
     const { showBar, setShowBar } = useContext(StateContext)
 
+    // side bar hiding style **----
     const hideStyle = {
         minWidth: "0",
         maxWidth: "0",
@@ -20,16 +21,27 @@ const Sidebar = () => {
         padding: "0"
     }
 
-    useEffect(() => {
+    // ----- ** to check the device width **-----
+    useLayoutEffect(() => {
+
+        // ** get the screen width
         const screen = window.screen.width
+
+        // ** initialy hiding the sidebar for small devices **
         if (screen < 640) {
             setShowBar(false)
         }
-    }, [])
+
+        
+    }, [setShowBar])
+
+
+    // ---- to apply the toggle behavior ----
+    const toggleBehave = showBar ? {} : hideStyle
 
     return (
         <div className="relative h-full text-[#9fadbc]">
-            <div className="absolute min-w-[260px] max-w-[260px] h-full bg-[#171a1e] flex flex-col justify-between items-center pb-[12px] sm:static top-0 left-0 duration-[0.4s]" style={showBar ? {} : hideStyle}>
+            <div style={toggleBehave} className="absolute min-w-[260px] max-w-[260px] h-full bg-[#171a1e] flex flex-col justify-between items-center pb-[12px] sm:static top-0 left-0 duration-[0.4s]">
                 {/* top */}
                 < div className="px-[8px] py-[12px] border-b-[1px] border-[#31383d] flex justify-start items-center gap-[10px] w-full relative" >
 
