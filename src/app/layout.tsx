@@ -1,4 +1,5 @@
 import "./globals.css";
+import ContextProvieder from "@/provider/ContextProvieder/ContextProvieder";
 import Navbar from "@/shared/Navbar/Navbar";
 import Sidebar from "@/shared/Sidebar/Sidebar";
 import type { Metadata } from "next";
@@ -19,13 +20,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col justify-center items-start h-screen w-screen bg-[#1d2125]">
-          <Navbar />
-          <div className="h-screen w-screen flex justify-center items-start">
-            <Sidebar />
-            {children}
+
+
+        <ContextProvieder>
+          <div className="flex flex-col justify-betweenl h-screen  bg-[#1d2125]">
+            <Navbar />
+            <div className="h-full w-full flex justify-center items-start">
+              <Sidebar />
+              {children}
+            </div>
           </div>
-        </div>
+        </ContextProvieder>
+
       </body>
     </html>
   );

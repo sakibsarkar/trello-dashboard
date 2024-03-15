@@ -6,12 +6,14 @@ function Navbar() {
         <nav className="w-full">
             <div className="w-full h-[47px] p-[8px] border-b-[1px] border-[#31383d] flex justify-between items-center text-[#9fadbc]">
                 {/* left side */}
-                <div className="flex justify-start items-center gap-[10px]">
+                <div className="w-full flex sm:justify-start justify-between items-center gap-[10px]w-full sm:w-fit">
                     <h2 className="font-[700]">TRELLO</h2>
-                    <button className="flex justify-center items-center gap-[5px] px-[10px] py-[6px]">Workspace <FaAngleDown /></button>
-                    <button className="flex justify-center items-center gap-[5px] px-[10px] py-[6px]">Recent <FaAngleDown /></button>
-                    <button className="flex justify-center items-center gap-[5px] px-[10px] py-[6px]">Started <FaAngleDown /></button>
-                    <button className="flex justify-center items-center gap-[5px] px-[10px] py-[6px]">Template <FaAngleDown /></button>
+                    <div className="hidden lg:flex justify-start items-center gap-[10px]">
+                        <button className="flex justify-center items-center gap-[5px] px-[10px] py-[6px]">Workspace <FaAngleDown /></button>
+                        <button className="flex justify-center items-center gap-[5px] px-[10px] py-[6px]">Recent <FaAngleDown /></button>
+                        <button className="flex justify-center items-center gap-[5px] px-[10px] py-[6px]">Started <FaAngleDown /></button>
+                        <button className="flex justify-center items-center gap-[5px] px-[10px] py-[6px]">Template <FaAngleDown /></button>
+                    </div>
 
                     <button className="px-[12px] py-[5px] bg-blue-500 rounded-md text-white">Create</button>
                 </div>

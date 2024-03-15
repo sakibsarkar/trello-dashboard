@@ -5,3 +5,8 @@
 .logoGradient {
     background: linear-gradient(#4BCE97, #006644, #216E4E, #00875a);
 }
+
+body {
+    position: relative;
+    overflow: hidden;
+}
